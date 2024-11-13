@@ -16,7 +16,7 @@ public class Main {
         String s = scrambleWordSolution("TAN");
         System.out.println(s);
 
-        s = scrambleWordFails("TAN");
+        s = scrambleWordStudent("TAN");
         System.out.println(s);
     }
 
@@ -27,7 +27,7 @@ public class Main {
         return scrambled;
     }
 
-    public static String scrambleWordFails(String word) {
+    public static String scrambleWordStudent(String word) {
         /* to be implemented in part a */
         String finword = word;
         int digit = -1;
@@ -37,7 +37,13 @@ public class Main {
                 word = word.substring(0, digit - 1) + "a" + word.substring(digit + 1);
                 finword = word.substring(0, digit - 1) + word.substring(digit + 1);
                 digit++;
-                finword = word.substring(0, digit - 1) + "A" + word.substring(digit + 1);
+                try {
+                    finword = word.substring(0, digit - 1) + "A" + word.substring(digit + 1);
+                } catch (Exception e) {
+                    System.out.format("Student code failed: %s%n",e.getMessage());
+                    break;
+                }
+
             }
         }
         return finword;
