@@ -7,7 +7,7 @@ Write a method that scrambles words in a phrase that have the letter 'A' in them
 | Tool     |  Version |
 |:---------|---------:|
 | Java     | 23.0.0.0 |
-| IntelliJ | 2024.2.4 |
+| IntelliJ | 2024.3.0 |
 | VSCode   |   1.95.2 |
 
 ## Change History
