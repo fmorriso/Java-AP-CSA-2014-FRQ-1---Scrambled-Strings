@@ -10,26 +10,47 @@ public class Main {
                 };
 
         for (String word : words) {
+            System.out.format("word = '%s'%n",word);
             System.out.println("Working solution: '" + word + "' becomes '" + scrambleWordSolution(word) + "'");
             System.out.format("Student solution: '%s' becomes '%s'%n", word, scrambleWordStudent(word));
+            System.out.format("Sample solution:  '%s' becomes '%s'%n", word, scrambleWordSampleSolution(word));
+            System.out.println("=".repeat(50));
         }
 
     }
 
-    public static String scrambleWordWhileLoop(String word) {
-        String scrambled = "";
+    public static String scrambleWordSampleSolution(String word) {
+        String scrambledWord = word;
+        String current, previous;
+        int i = 1;
+        while(i < scrambledWord.length())
+        {
+            previous = scrambledWord.substring(i - 1, i);
+            current = scrambledWord.substring(i, i + 1);
 
+            if("A".equals(previous) && ! "A".equals(current))
+            {
+                // swap needed
+                scrambledWord =
+                        scrambledWord.substring(0, i - 1) +
+                        current + previous +
+                        scrambledWord.substring(i + 1);
+                // jump past the two characters we just swapped
+                i += 2;
+            }
+            else
+                // no swap needed, so advance one characters
+                i++;
+        }
 
-        return scrambled;
+        return scrambledWord;
     }
 
     public static String scrambleWordStudent(String word) {
-        System.out.format("Student solution: attempting to scramble word: '%s'%n", word);
-
         // WARNING: this student's attempted solution fails to check for word being null, the empty string
         //         or just 1 character long.
         // SUGGESTION: if(word.length() <= 1) return word;
-
+        String originalWord = word;
         /* to be implemented in part a */
         String finword = word;
         int digit = -1;
@@ -41,7 +62,7 @@ public class Main {
                 try {
                     word = word.substring(0, digit - 1) + "a" + word.substring(digit + 1);
                 } catch (Exception e) {
-                    System.err.format("1. Student code failed: %s%n", e.getMessage());
+                    System.out.format("1. Student code failed for word '%s': %s%n", originalWord, e.getMessage());
                     break;
                 }
 
@@ -49,7 +70,7 @@ public class Main {
                 try {
                 finword = word.substring(0, digit - 1) + word.substring(digit + 1);
                 } catch (Exception e) {
-                    System.err.format("2. Student code failed: %s%n", e.getMessage());
+                    System.out.format("2. Student code failed for word '%s': %s%n", originalWord, e.getMessage());
                     break;
                 }
 
@@ -59,7 +80,7 @@ public class Main {
                 try {
                     finword = word.substring(0, digit - 1) + "A" + word.substring(digit + 1);
                 } catch (Exception e) {
-                    System.err.format("3. Student code failed: %s%n", e.getMessage());
+                    System.out.format("3. Student code failed for word '%s': %s%n", originalWord, e.getMessage());
                     break;
                 }
             }

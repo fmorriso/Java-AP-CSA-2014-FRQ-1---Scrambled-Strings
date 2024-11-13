@@ -18,7 +18,7 @@ Write a method that scrambles words in a phrase that have the letter 'A' in them
 
 ## References
 
-* [Display an Image in Java](https://www.delftstack.com/howto/java/display-an-image-in-java/)
+* [scrambleWord Sample Solution](https://www.apcomputersciencetutoring.com/scrambleword-scrambleorremove-free-response-answer/)
 * [CsAwesome - 4.14. Free Response - String Scramble A¶](https://runestone.academy/ns/books/published/LPHS_2024-25/Unit4-Iteration/FRQstringScrambleA.html)
 
 ## Instruction Summary
