@@ -12,7 +12,7 @@ Write a method that scrambles words in a phrase that have the letter 'A' in them
 
 | Date       | Description      |
 |:-----------|:-----------------|
-| 2024-11-01 | Initial creation |
+| 2024-11-13 | Initial creation |
 
 ## References
 * [Display an Image in Java](https://www.delftstack.com/howto/java/display-an-image-in-java/)
