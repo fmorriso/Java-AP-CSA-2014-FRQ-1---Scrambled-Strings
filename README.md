@@ -12,14 +12,17 @@ Write a method that scrambles words in a phrase that have the letter 'A' in them
 
 ## Change History
 
-| Date       | Description      |
-|:-----------|:-----------------|
-| 2024-11-13 | Initial creation |
+| Date       | Description           |
+|:-----------|:----------------------|
+| 2024-11-13 | Initial creation      |
+| 2024-11-14 | Add for-loop solution |
+
 
 ## References
 
 * [scrambleWord Sample Solution](https://www.apcomputersciencetutoring.com/scrambleword-scrambleorremove-free-response-answer/)
 * [CsAwesome - 4.14. Free Response - String Scramble A¶](https://runestone.academy/ns/books/published/LPHS_2024-25/Unit4-Iteration/FRQstringScrambleA.html)
+* [ AP Computer Science A - 2014 Free-Response Questions (PDF)](https://secure-media.collegeboard.org/digitalServices/pdf/ap/ap14_frq_computer_science_a.pdf)
 
 ## Instruction Summary
 
