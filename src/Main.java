@@ -11,8 +11,8 @@ public class Main {
 
         for (String word : words) {
             System.out.format("word = '%s'%n",word);
-            System.out.println("Working solution: '" + word + "' becomes '" + scrambleWordSolution(word) + "'");
-            System.out.format("Student solution: '%s' becomes '%s'%n", word, scrambleWordStudent(word));
+            System.out.format("Working solution:              '%s' becomes '%s'%n", word, scrambleWordSolution(word));
+            System.out.format("Student solution:              '%s' becomes '%s'%n", word, scrambleWordStudent(word));
             System.out.format("Sample solution (while-loop):  '%s' becomes '%s'%n", word, scrambleWordWhileLoop(word));
             System.out.format("Sample solution (for-loop):    '%s' becomes '%s'%n", word, scrambleWordForLoop(word));
             System.out.println("=".repeat(50));
@@ -59,6 +59,7 @@ public class Main {
         //      That is deliberate so we can have fine-grain control over when and,
         //      more important, HOW MUCH to increment the loop counter, depending on circumstances.
         for(int i = 1; i < scrambledWord.length(); ) {
+
             previous = scrambledWord.substring(i - 1, i);
             current = scrambledWord.substring(i, i + 1);
 
