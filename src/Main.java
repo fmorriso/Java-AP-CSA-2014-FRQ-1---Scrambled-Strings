@@ -13,13 +13,14 @@ public class Main {
             System.out.format("word = '%s'%n",word);
             System.out.println("Working solution: '" + word + "' becomes '" + scrambleWordSolution(word) + "'");
             System.out.format("Student solution: '%s' becomes '%s'%n", word, scrambleWordStudent(word));
-            System.out.format("Sample solution:  '%s' becomes '%s'%n", word, scrambleWordSampleSolution(word));
+            System.out.format("Sample solution (while-loop):  '%s' becomes '%s'%n", word, scrambleWordWhileLoop(word));
+            System.out.format("Sample solution (for-loop):    '%s' becomes '%s'%n", word, scrambleWordForLoop(word));
             System.out.println("=".repeat(50));
         }
 
     }
 
-    public static String scrambleWordSampleSolution(String word) {
+    public static String scrambleWordWhileLoop(String word) {
         String scrambledWord = word;
         String current, previous;
         int i = 1;
@@ -35,6 +36,39 @@ public class Main {
                         scrambledWord.substring(0, i - 1) +
                         current + previous +
                         scrambledWord.substring(i + 1);
+                // jump past the two characters we just swapped
+                i += 2;
+            }
+            else
+                // no swap needed, so advance one character
+                i++;
+        }
+
+        return scrambledWord;
+    }
+
+    /**
+     * @param word - the word to be scrambled
+     * @return String containing the original word, scrambled.
+     */
+    public static String scrambleWordForLoop(String word) {
+
+        String scrambledWord = word;
+        String current, previous;
+        //NOTE: notice the increment part of the for-loop header is empty.
+        //      That is deliberate so we can have fine-grain control over when and,
+        //      more important, HOW MUCH to increment the loop counter, depending on circumstances.
+        for(int i = 1; i < scrambledWord.length(); ) {
+            previous = scrambledWord.substring(i - 1, i);
+            current = scrambledWord.substring(i, i + 1);
+
+            if("A".equals(previous) && ! "A".equals(current))
+            {
+                // swap needed
+                scrambledWord =
+                        scrambledWord.substring(0, i - 1) +
+                                current + previous +
+                                scrambledWord.substring(i + 1);
                 // jump past the two characters we just swapped
                 i += 2;
             }
@@ -106,7 +140,7 @@ public class Main {
             }
 
         }
-        return (scrambleWord);
+        return scrambleWord;
     }
 
     /** get the java version that is running the current program
