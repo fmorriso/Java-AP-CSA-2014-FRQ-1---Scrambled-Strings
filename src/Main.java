@@ -39,7 +39,7 @@ public class Main {
                 i += 2;
             }
             else
-                // no swap needed, so advance one characters
+                // no swap needed, so advance one character
                 i++;
         }
 
