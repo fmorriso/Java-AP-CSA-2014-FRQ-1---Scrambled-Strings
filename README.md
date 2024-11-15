@@ -6,17 +6,17 @@ Write a method that scrambles words in a phrase that have the letter 'A' in them
 
 | Tool     |  Version |
 |:---------|---------:|
-| Java     | 23.0.0.0 |
+| Java     | 23.0.1.0 |
 | IntelliJ | 2024.3.0 |
 | VSCode   |   1.95.2 |
 
 ## Change History
 
-| Date       | Description           |
-|:-----------|:----------------------|
-| 2024-11-13 | Initial creation      |
-| 2024-11-14 | Add for-loop solution |
-| 2024-11-15 | Add indexOf solution |
+| Date       | Description                                                 |
+|:-----------|:------------------------------------------------------------|
+| 2024-11-13 | Initial creation                                            |
+| 2024-11-14 | Add for-loop solution                                       |
+| 2024-11-15 | Add indexOf solution and verify code works with Java 23.0.1 |
 
 
 ## References
