@@ -16,6 +16,7 @@ Write a method that scrambles words in a phrase that have the letter 'A' in them
 |:-----------|:----------------------|
 | 2024-11-13 | Initial creation      |
 | 2024-11-14 | Add for-loop solution |
+| 2024-11-15 | Add indexOf solution |
 
 
 ## References
