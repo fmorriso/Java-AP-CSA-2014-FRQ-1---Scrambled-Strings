@@ -153,7 +153,7 @@ public class Main {
         //NOTE: we DELIBERATELY create "i" OUTSIDE the for-loop to provide better fine-grain incrementation.
         int i = 0;
         for (i = 0; i < word.length(); ) {
-            // Is there is another "A" in the word?
+            // Is there another "A" in the word?
             i = word.indexOf("A", i);
             if (i == -1) break; // No, there isn't, so we're done.
             String current = word.substring(i, i + 1);
